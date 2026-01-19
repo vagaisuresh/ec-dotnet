@@ -1,5 +1,5 @@
 using EC.Application.DTOs;
-using EC.Application.Interfaces;
+using EC.Application.Interfaces.Common;
 
 namespace EC.Application.Features.Brands.Commands;
 
