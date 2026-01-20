@@ -7,15 +7,19 @@ public class UnitOfWork : IUnitOfWork
 {
     private readonly AppDbContext _context;
 
+    private IUserRepository _userRepository;
     private IBrandRepository _brandRepository;
 
     public UnitOfWork(AppDbContext context,
+        IUserRepository userRepository,
         IBrandRepository brandRepository)
     {
         _context = context;
+        _userRepository = userRepository;
         _brandRepository = brandRepository;
     }
 
+    public IUserRepository UserRepository => _userRepository;
     public IBrandRepository BrandRepository => _brandRepository;
 
     public async Task SaveAsync()

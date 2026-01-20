@@ -2,6 +2,7 @@ namespace EC.Domain.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {
+    IUserRepository UserRepository { get; } 
     IBrandRepository BrandRepository { get; }
     
     /// <summary>

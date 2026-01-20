@@ -10,5 +10,7 @@ public class AppDbContext : DbContext
     {
     }
 
+    public DbSet<User> Users { get; set; } = null!;
+    
     public DbSet<Brand> Brands { get; set; }
 }
