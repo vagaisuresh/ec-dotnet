@@ -4,10 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAppDbContext();
 builder.Services.AddCorsPolicies();
-
+builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddAuthentication();
 builder.Services.AddApplicationServices();
-
+builder.Services.AddInfrastructureServices();
 builder.Services.AddPersistenceServices();
 
 builder.Services.AddControllers();
